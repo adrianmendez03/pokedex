@@ -1,0 +1,190 @@
+* {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none !important;
+}
+
+nav {
+    background-color: #EE4040 !important;
+}
+
+span {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+#nav-logo {
+    color: #fff;
+}
+
+.container {
+    margin-top: 10rem;
+}
+
+.card {
+    width: 20rem;
+}
+
+.corners {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.display-card {
+    margin-bottom: 3rem;
+}
+
+.list {
+    margin: 8rem 5rem 0 5rem;
+}
+
+/** pokemon colors**/
+
+.bug-light {
+    background-color: #C6D16E !important;
+}
+
+.bug {
+    background-color: #A8B820 !important;
+}
+
+.dark-light {
+    background-color: #A29288 !important;
+}
+
+.dark {
+    background-color: #705848 !important;
+}
+
+.dragon-light {
+    background-color: #A27DFA !important;
+}
+
+.dragon {
+    background-color: #7038F8 !important;
+}
+
+.electric-light {
+    background-color: #FAE078 !important;
+}
+
+.electric {
+    background-color: #F8D030 !important;
+}
+
+.fairy-light {
+    background-color: #F4BDC9 !important;
+}
+
+.fairy {
+    background-color: #EE99AC !important;
+}
+
+.fighting-light {
+    background-color: #D67873 !important;
+}
+
+.fighting {
+    background-color: #C03028 !important;
+}
+
+.fire-light {
+    background-color: #F5AC78 !important;
+}
+
+.fire {
+    background-color: #F08030 !important;
+}
+
+.flying-light {
+    background-color: #C6B7F5 !important;
+}
+
+.flying {
+    background-color: #A890F0 !important;
+}
+
+.ghost-light {
+    background-color: #A292BC !important;
+}
+
+.ghost {
+    background-color: #705898 !important;
+}
+
+.grass-light {
+    background-color: #A7DB8D !important;
+}
+
+.grass {
+    background-color: #78C850 !important;
+}
+
+.ground-light {
+    background-color: #EBD69D !important;
+}
+
+.ground {
+    background-color: #E0C068 !important;
+}
+
+.ice-light {
+    background-color: #BCE6E6 !important;
+}
+
+.ice {
+    background-color:  #98D8D8 !important;
+}
+
+.normal-light {
+    background-color: #C6C6A7 !important;
+}
+
+.normal {
+    background-color: #A8A878 !important;
+}
+
+.poison-light {
+    background-color: #C183C1 !important;
+}
+
+.poison {
+    background-color: #A040A0 !important;
+}
+
+.psychic-light {
+    background-color: #FA92B2 !important;
+}
+
+.psychic {
+    background-color: #F85888 !important;
+}
+
+.rock-light {
+    background-color: #D1C17D !important;
+}
+
+.rock {
+    background-color: #B8A038 !important;
+}
+
+.steel-light {
+    background-color: #D1D1E0 !important;
+}
+
+.steel {
+    background-color: #B8B8D0 !important;
+}
+
+.water-light {
+    background-color: #9DB7F5 !important;
+}
+
+.water {
+    background-color: #6890F0 !important;
+}
+/** end of pokemon colors**/
