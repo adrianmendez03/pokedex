@@ -4,14 +4,14 @@ import axios from 'axios';
 class DisplayCard extends React.Component {
     state = {
         id: '',
-        name : '',
+        name : this.props.name,
         imageURL: '',
         types: [],
         color: ''
     }
 
     async componentDidMount() {
-        const res = await axios.get(this.props.url);
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/` + this.state.name);
 
         let typeArr = []
 
@@ -20,20 +20,19 @@ class DisplayCard extends React.Component {
         })
 
         this.setState({
-            id: res.data.id,
-            name: res.data.name, 
+            id: res.data.id, 
             imageURL: res.data.sprites.front_default,
             types: typeArr,
             color: res.data.types[0].type.name
         })
     }
-
+    
     renderTypes() {
         const { types } = this.state;
 
         const labels = types.map(type => {
             return (
-                <h3 className="text-capitalize"><span class={`badge` + " " + `badge-pill` + " " + type}>{type}</span></h3>
+                <h3 className="text-capitalize"><span className={`badge` + " " + `badge-pill` + " " + type}>{type}</span></h3>
             )
         })
 
@@ -41,12 +40,11 @@ class DisplayCard extends React.Component {
     }
 
     render() {
-        const { id, name, imageURL, types } = this.state;
+        const { id, name, imageURL } = this.state;
 
         const colorLight = `${this.state.color}-light`;
-
         return (
-            <div className={`card` + " " + colorLight}>
+            <div className={`card` + " " + colorLight} id={id}>
                 <h5 className="card-header">{id}</h5>
                 <img src={imageURL} alt={name} className="card-img-top"></img>
                 <div className="card-body text-center text-capitalize">

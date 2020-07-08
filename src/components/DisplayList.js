@@ -4,7 +4,7 @@ import DisplayCard from './DisplayCard';
 
 class DisplayList extends React.Component {
     state = {
-        url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150',
+        url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151',
         pokemon: null
     };
 
@@ -13,25 +13,28 @@ class DisplayList extends React.Component {
         this.setState({ pokemon: res.data['results']});
     }
 
+    createCards(list) {
+        return (
+            <div className="row">
+                {list.map(pokemon => {
+                    return (
+                        <div key={pokemon.name} className="col-xl-2 col-lg-3 col-md-4 d-flex justify-content-center display-card">
+                            <DisplayCard
+                                key={pokemon.name}
+                                name={pokemon.name}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
     render() {
         if(!this.state.pokemon) {
             return <h1>Catching Pokémon . . .</h1>
         } else {
-            return (
-                <div className="row">
-                    {this.state.pokemon.map(pokemon => {
-                        return (
-                            <div className="col-xl-2 col-lg-3 col-md-4 d-flex justify-content-center display-card">
-                                <DisplayCard
-                                    key={pokemon.name}
-                                    name={pokemon.name}
-                                    url={pokemon.url}
-                                />
-                            </div>
-                        )
-                    })}
-                </div>
-            )
+            return this.createCards(this.state.pokemon);
         }
     }
 }

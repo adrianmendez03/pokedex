@@ -20,8 +20,8 @@ span {
     color: #fff;
 }
 
-.container {
-    margin-top: 10rem;
+.container-fluid {
+    background-repeat: no-repeat;
 }
 
 .card {
@@ -40,6 +40,13 @@ span {
 
 .list {
     margin: 8rem 5rem 0 5rem;
+}
+
+
+
+.navbar {
+    min-height: 6rem;
+    max-height: 6rem;
 }
 
 /** pokemon colors**/

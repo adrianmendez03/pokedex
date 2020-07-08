@@ -4,13 +4,21 @@ import DisplayList from './DisplayList';
 import './App.css'
 
 class App extends React.Component {
-    render() {
+    state = {
+        term: ''
+    }
+
+    updateTerm = (newTerm) => {
+        this.setState({term: newTerm})
+    }
+
+    render() { 
         return (
             <div>
-                <Navbar />
-                <div className="container-fluid">
+                <Navbar updateTerm={this.updateTerm.bind(this)} />
+                <div className="container-fluid" id="#">
                     <div className="list">
-                        <DisplayList />
+                        <DisplayList term={this.state.term} />
                     </div>
                 </div>
             </div>
