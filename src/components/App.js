@@ -4,21 +4,25 @@ import DisplayList from './DisplayList';
 import './App.css'
 
 class App extends React.Component {
-    state = {
-        term: ''
+    constructor(props) {
+        super(props);
+
+        this.state = { currentTab: 'one' }
+
+        this.manageTabs =  this.manageTabs.bind(this)
     }
 
-    updateTerm = (newTerm) => {
-        this.setState({term: newTerm})
+    manageTabs(tab) {
+        this.setState({ currentTab: tab })
     }
 
     render() { 
         return (
             <div>
-                <Navbar updateTerm={this.updateTerm.bind(this)} />
-                <div className="container-fluid" id="#">
+                <Navbar callBack={this.manageTabs}/>
+                <div className="container-fluid">
                     <div className="list">
-                        <DisplayList term={this.state.term} />
+                        <DisplayList currentTab={this.state.currentTab}/>
                     </div>
                 </div>
             </div>
