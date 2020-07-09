@@ -53,15 +53,21 @@ span {
     }
 
     .card-title {
-        font-size: 1.45rem;
+        font-size: 1.75rem;
     }
 
     .display-card {
-        margin-bottom: .5rem;
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        width: 100vw !important;
+        position: relative !important;
+        left: -5rem !important;
     }
 
     .type-text {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 }
 
