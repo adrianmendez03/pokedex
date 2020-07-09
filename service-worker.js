@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pokedex/precache-manifest.f2b8d7cc0302266dddcf059493b91e55.js"
+  "/pokedex/precache-manifest.fbb844cf8aec8c133f9547cfcc551560.js"
 );
 
 self.addEventListener('message', (event) => {
