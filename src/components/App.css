@@ -20,18 +20,22 @@ span {
     color: #fff;
 }
 
-.container-fluid {
-    background-repeat: no-repeat;
+#nav-btn {
+    color: #fff;
 }
+
 
 .card {
-    width: 20rem;
+    width: 20rem !important;
+    min-width: 10.5rem !important;
 }
 
-.corners {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+  
+.navbar-toggler {
+    border-color: rgb(255,255,255) !important;
 }
 
 .display-card {
@@ -42,11 +46,23 @@ span {
     margin: 8rem 5rem 0 5rem;
 }
 
+@media (max-width: 576px) {
+    span {
+        margin-right: .1rem;
+        margin-left: .1rem;
+    }
 
+    .card-title {
+        font-size: 1.45rem;
+    }
 
-.navbar {
-    min-height: 6rem;
-    max-height: 6rem;
+    .display-card {
+        margin-bottom: .5rem;
+    }
+
+    .type-text {
+        font-size: 1.25rem;
+    }
 }
 
 /** pokemon colors**/

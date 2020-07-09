@@ -6,7 +6,10 @@ class Navbar extends React.Component {
             <div>
                 <nav className="navbar navbar-expand-md navbar-dark fixed-top corners justify-content-between">
                     <a href="#" id="nav-logo">Pokédex</a>
-                    <div className="collapse navbar-collapse" id="navbarText">
+                    <button className="navbar-toggler" id="nav-btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>   
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
                                 <a className="nav-link" id="one" href="#" onClick={(e) => this.props.callBack(e.target.id)}>Gen I<span className="sr-only">(current)</span></a>
@@ -22,7 +25,7 @@ class Navbar extends React.Component {
                             </li>
                         </ul>
                         <span className="navbar-text">
-                            Powered by PokeAPI
+                            Powered by PokéAPI
                         </span>
                     </div>
                 </nav>

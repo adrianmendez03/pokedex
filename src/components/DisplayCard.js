@@ -32,7 +32,7 @@ class DisplayCard extends React.Component {
 
         const labels = types.map(type => {
             return (
-                <h3 className="text-capitalize"><span className={`badge` + " " + `badge-pill` + " " + type}>{type}</span></h3>
+                <h3 className="type-text text-capitalize"><span className={`badge` + " " + `badge-pill` + " " + type}>{type}</span></h3>
             )
         })
 
