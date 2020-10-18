@@ -12,6 +12,8 @@ class App extends React.Component {
         this.manageTabs =  this.manageTabs.bind(this)
     }
 
+    // manages what gen to currently show user.
+
     manageTabs(tab) {
         this.setState({ currentTab: tab })
     }
